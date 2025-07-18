@@ -14,9 +14,10 @@ class Password {
   bool isValid() {
     final hasUppercase = _password.contains(RegExp(r'[A-Z]'));
     final hasLowercase = _password.contains(RegExp(r'[a-z]'));
+    final hasNumber = _password.contains(RegExp(r'\d'));
     final lengthOk = _password.length >= 8 && _password.length <= 16;
 
-    return hasUppercase && hasLowercase && lengthOk;
+    return hasUppercase && hasLowercase && hasNumber && lengthOk;
   }
 
   @override
