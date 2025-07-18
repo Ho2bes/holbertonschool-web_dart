@@ -6,5 +6,5 @@ bool isPalindrome(String s)
 
   String reversed = cleaned.split('').reversed.join('');
 
-  return cleaned == reversed
+  return cleaned == reversed;
 }
