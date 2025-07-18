@@ -26,11 +26,7 @@ class Password {
 }
 
 class User extends Password {
-  String? user_password;
-
-  User({required String? user_password})
-      : user_password = user_password,
-        super(password: user_password);
+  User({required String? user_password}) : super(password: user_password);
 
   bool isUserPasswordValid() {
     return isValid();
