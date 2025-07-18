@@ -11,6 +11,7 @@ class Password {
 
   bool isValid() {
     if (_password == null) return false;
+
     final hasUppercase = _password!.contains(RegExp(r'[A-Z]'));
     final hasLowercase = _password!.contains(RegExp(r'[a-z]'));
     final hasNumber = _password!.contains(RegExp(r'\d'));
@@ -22,13 +23,5 @@ class Password {
   @override
   String toString() {
     return 'Your Password is: ${_password ?? ""}';
-  }
-}
-
-class User extends Password {
-  User({required String? user_password}) : super(password: user_password);
-
-  bool isUserPasswordValid() {
-    return isValid();
   }
 }
